@@ -5,7 +5,7 @@ Ejercicio 10
 
 Solución
 ------
-
+```
 1. G = (N, T, S, P)  
 N = { < sentencia >, < digito >, < entero >, < operacion > }  
 T = { 0..9, '+', '-', '*', '/' }  
@@ -20,3 +20,4 @@ P =
   < letra_minus > ::= a..z  
   < letra_mayus > ::= A..Z  
 }  
+```
