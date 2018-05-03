@@ -8,7 +8,7 @@ Diferencias básicas:
 
 | Intérprete    | Compilador    |
 |:-------------:|:-------------:|
-| Ejecuta el programa de entrada directamente siguiendo el orden **logico** de ejecucion | Produce un programa equivalente en lenguaje objeto siguiendo el orden **fisico** de las sentencias |
+| Ejecuta el programa de entrada directamente siguiendo el orden **lógico** de ejecución | Produce un programa equivalente en lenguaje objeto siguiendo el orden **físico** de las sentencias |
 
 Ventajas y desventajas:
 
