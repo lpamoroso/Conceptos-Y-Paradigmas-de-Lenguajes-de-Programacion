@@ -134,4 +134,13 @@ end
 ```
 |Error| Tipo |
 |:---:|:---------:|
+|Puts 'Hola, ¿Cuál es tu nombre?'|El error es **sintáctico**: error de tipeo en Puts(en realidad va puts)|
+|puts 'Mi sobrenombre es 'Juan''|El error es **semántico**: se supone que se intenta escribir "Mi sobrenombre es 'Juan'". Esa no es la forma de hacerlo.|
+|meses = edad * 2|El error es **semántico**: la variable edad no esta declarada.|
+|dias = 'meses' * 30|Podría haber un error **semántico** si lo que se pretende es hacer una multiplicación por 30 de la variable meses en lugar de escribir 30 veces meses.|
+|hs= 'dias * 24'|Idem caso anterior: podría haber un error **semántico** si lo que se pretende es hacer una multiplicación por 24 de la variable dias en lugar de escribir dias * 24 como string.|
+|puts 'Eso es: meses + ' meses o ' + dias + ' días o ' + hs + ' horas'|El error es **sintáctico**: hay fallos a la hora de concatenar, variables que no existen|
+|puts 'entre ambos tenemos ' + edad + ' años'|El error es **sintáctico**: se esta intentando concatenar de manera incorrecta|
+
+
 *Ayuda: Semánticos +4*
