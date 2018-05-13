@@ -14,10 +14,11 @@ Procedure B(nombre j:integer);
     write (j,m);
   end;
 begin
-  for m=1 to 10 begin    a[m]=m;   end; 
-  m:=4;      B(
-  a(m)
-  );
+  for m=1 to 10 begin
+    a[m]=m;
+  end;
+  m:=4;
+  B(a(m));
   write (m);
 end;
 ```
@@ -34,10 +35,11 @@ Procedure B(nombre j:integer);
     write (j,m);
   end;
 begin
-  for m=1 to 10 begin    a[m]=m;   end; 
-  m:=4;      B(
-  a(m)
-  );
+  for m=1 to 10 begin
+    a[m]=m;
+  end;
+  m:=4;
+  B(a(m));
   write (m);
 end;
 ```
@@ -54,10 +56,11 @@ Procedure B(nombre j:integer);
     write (j,m);
   end;
 begin
-  for m=1 to 10 begin    a[m]=m;   end; 
-  m:=4;      B(
-  a(m)
-  );
+  for m=1 to 10 begin
+    a[m]=m;
+  end;
+  m:=4;
+  B(a(m));
   write (m);
 end;
 ```
@@ -74,10 +77,11 @@ Procedure B(nombre j:integer);
     write (j,m);
   end;
 begin
-  for m=1 to 10 begin    a[m]=m;   end; 
-  m:=4;      B(
-  a(m)
-  );
+  for m=1 to 10 begin
+    a[m]=m;
+  end;
+  m:=4;
+  B(a(m));
   write (m);
 end;
 ```
