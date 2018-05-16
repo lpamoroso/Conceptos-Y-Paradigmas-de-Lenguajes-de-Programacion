@@ -6,9 +6,9 @@
 |:------:|:------:|
 |  |LE|
 |  |LD|
-|  |j = 3|||
-|  |m = 2|||
-|  |i = 1|||
+|  |j = 3|
+|  |m = 2|
+|  |i = 1|
 |  |Proc. Recibe(x:integer; y:integer)|
 |  |Proc. Dos()|
 |  |VR|
