@@ -1,4 +1,3 @@
-
 # Ejercicio 4
 
 Sea el siguiente programa escrito en Pascal-like
@@ -47,36 +46,3 @@ end.
 3. ¿Existió algún caso que no pudo realizarlo porque saltó algún tipo de error? Diga cuál y por qué.
 
 4. ¿Dará el mismo resultado si se trata de un lenguaje que sigue la cadena dinámica? Justifique la respuesta realizando las pilas de activación.
-
-## Solución
-
-1. Encontrar herramienta para crear árbol.
-
-2. Pilas de ejecución  
-    1. Cadena estática 
-        1. Por referencia  
-
-|*1|PR|
-|:------:|:------:|
-|  |LE|
-|  |LD|
-|  |j = ~~3~~8|||
-|  |m = 2|||
-|  |i = ~~1~~5|||
-|  |Proc. Recibe(x:integer; y:integer)|
-|  |Proc. Dos()|
-|  |VR|
-|*2|PR|
-|*1|LE|
-|*1|LD|
-|  |m = ~~5~~9|
-|  |VR|
-|*3|PR|
-|*1|LE|
-|*2|LD|
-|  | - |
-|  |VR|
-
-write (x, y, i, j, m); (procedure recibe) --> imprime 5, 8, 5, 8, 9.
-write (i, j, m); (procedure dos) --> imprime 5, 8, 9.
-write (i, j, m); (procedure main) --> imprime 5, 8, 2.
