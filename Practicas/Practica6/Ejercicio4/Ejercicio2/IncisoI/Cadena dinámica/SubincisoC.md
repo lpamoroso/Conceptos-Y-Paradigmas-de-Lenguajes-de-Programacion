@@ -1,4 +1,4 @@
-# Subinciso C del inciso II del punto 2.
+﻿# Subinciso C del inciso II del punto 2.
 
 ## Cadena Dinámica por valor-resultado
 
@@ -23,7 +23,3 @@
 |  |x = ~~1~~5|
 |  |y = ~~3~~8|
 |  |VR|
-
-write (x, y, i, j, m); (procedure recibe) --> imprime 5, 8, 1, 3, 9.  
-write (i, j, m); (procedure dos) --> imprime 5, 8, 9.  
-write (i, j, m); (procedure main) --> imprime 5, 8, 2.
