@@ -2,6 +2,4 @@
 
 ## Cadena dinámica por resultado
 
-write (x, y, i, j, m); (procedure recibe) --> imprime 5, 8, 1, 3, 9.  
-write (i, j, m); (procedure dos) --> imprime 5, 8, 9.  
-write (i, j, m); (procedure main) --> imprime 5, 8, 2.
+En este caso ocurre un problema a la hora de resolver x:=i + x + j; dado que x no tiene un valor asignado por defecto y por lo tanto ocurre un error al realizar la operación.
