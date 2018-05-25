@@ -2,24 +2,4 @@
 
 ## Cadena Dinámica por resultado
 
-|*1|PR|
-|:------:|:------:|
-|  |LE|
-|  |LD|
-|  |j = ~~3~~8|
-|  |m = 2|
-|  |i = ~~1~~5|
-|  |Proc. Recibe(x:integer; y:integer)|
-|  |Proc. Dos()|
-|  |VR|
-|*2|PR|
-|*1|LE|
-|*1|LD|
-|  |m = ~~5~~9|
-|  |VR|
-|*3|PR|
-|*1|LE|
-|*2|LD|
-|  |x = ~~1~~5|
-|  |y = ~~3~~8|
-|  |VR|
+En este caso ocurre un problema a la hora de resolver x:=i + x + j; dado que x no tiene un valor asignado por defecto y por lo tanto ocurre un error al realizar la operación.
