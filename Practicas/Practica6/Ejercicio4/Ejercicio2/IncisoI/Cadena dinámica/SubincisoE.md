@@ -7,7 +7,7 @@
 |  |LE|
 |  |LD|
 |  |j = ~~3~~8|
-|  |m = 2|||
+|  |m = 2|
 |  |i = ~~1~~5|
 |  |Proc. Recibe(x:integer; y:integer)|
 |  |Proc. Dos()|

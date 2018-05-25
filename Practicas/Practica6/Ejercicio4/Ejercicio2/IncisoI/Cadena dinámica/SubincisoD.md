@@ -1,4 +1,4 @@
-# Subinciso D del inciso II del punto 2.
+﻿# Subinciso D del inciso II del punto 2.
 
 ## Cadena Dinámica por nombre
 
@@ -7,7 +7,7 @@
 |  |LE|
 |  |LD|
 |  |j = ~~3~~8|
-|  |m = 2|||
+|  |m = 2|
 |  |i = ~~1~~5|
 |  |Proc. Recibe(x:integer; y:integer)|
 |  |Proc. Dos()|
