@@ -1,6 +1,6 @@
 # Ejercicio 7
 
-Sea el siguiente programa escrito en Pascal:
+Sea el siguiente programa escrito en pascal:
 
 ```pascal
 Program​ Principal;
