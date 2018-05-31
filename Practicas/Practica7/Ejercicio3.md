@@ -89,21 +89,21 @@ Un tipo de dato recursivo T se define como una estructura que puede contener com
 
 2.
 * Java
-  + Class Persona: definido por el usuario.
+  + Class Persona: definido por el usuario compuesto tad.
   + String nombre;: predefinido compuesto.
   + String apellido;: predefinido compuesto.
   + int edad;: predefinido elemental.
 
 * C
-  + typedef struct nodoLista{: definido por el usuario.
-  + void* dato;: definido por el usuario.
+  + typedef struct nodoLista{: definido por el usuario producto cartesiano.
+  + void* dato;: definido por el usuario recursivo.
   + struct nodoLista* siguiente: definido por el usuario.
-  + typedef struct lista{: definido por el usuario.
+  + typedef struct lista{: definido por el usuario producto cartesiano.
   + int cantidad;: predefinido elemental.
-  + nodoLista* primero: definido por el usuario.
+  + nodoLista* primero: definido por el usuario recursivo.
 
 * C
-  + union codigo{: definido por el usuario.
+  + union codigo{: definido por el usuario union.
   + int numero;: predefinido elemental.
   + char id;: predefinido elemental.
 
@@ -115,22 +115,22 @@ Un tipo de dato recursivo T se define como una estructura que puede contener com
   + cuatro: 4: predefinido o definido por el usuario.
 
 * PHP
-  + function doble($x){: definido por el usuario.
-  + $x:puede ser definido por el usuario o predefinido.
+  + function doble($x){: definido por el usuario tad.
+  + $x:definido por el usuario o predefinido.
 
 * Python
-  + tuple = ('physics', 'chemistry', 1997, 2000): predefinido o definido por el usuario.
+  + tuple = ('physics', 'chemistry', 1997, 2000): definido por el usuario.
 
 * Haskell
   + data ArbolBinario Int =
   Nil |
   Nodo int
   (ArbolBinarioInt dato)
-  (ArbolBinarioInt dato): predefinido o definido por el usuario.
+  (ArbolBinarioInt dato): definido por el usuario recursivo.
 
 * Haskell
   + Haskell
     data Color =
       Rojo |
       Verde |
-      Azul : predefinido o definido por el usuario.
+      Azul : definido por el usuario.
