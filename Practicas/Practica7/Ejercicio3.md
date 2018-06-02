@@ -95,9 +95,9 @@ Un tipo de dato recursivo T se define como una estructura que puede contener com
   + int edad;: predefinido elemental.
 
 * C
-  + typedef struct nodoLista{: definido por el usuario producto cartesiano.
+  + typedef struct nodoLista{: definido por el usuario compuesto producto cartesiano.
   + void* dato;: definido por el usuario recursivo.
-  + struct nodoLista* siguiente: definido por el usuario.
+  + struct nodoLista* siguiente: definido por el usuario compuesto recursivo.
   + typedef struct lista{: definido por el usuario producto cartesiano.
   + int cantidad;: predefinido elemental.
   + nodoLista* primero: definido por el usuario recursivo.
@@ -119,7 +119,7 @@ Un tipo de dato recursivo T se define como una estructura que puede contener com
   + $x:definido por el usuario o predefinido.
 
 * Python
-  + tuple = ('physics', 'chemistry', 1997, 2000): definido por el usuario.
+  + tuple = ('physics', 'chemistry', 1997, 2000): definido por el usuario compuesto.
 
 * Haskell
   + data ArbolBinario Int =
