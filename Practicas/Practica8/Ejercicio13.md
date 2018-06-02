@@ -62,19 +62,18 @@ END.
     <b>Verdadero.</b>
     </td>
     <td>
-    En (7) se levanta e y se maneja en 4, luego se relanza la excepción que es manejada en (6) y termina manejándose nuevamente en (1)
-    <b>Falso.</b>
+    En(7) se levanta e y se maneja en 4, luego se relanza la excepción que es manejada en(1) porque e pertenece a main.
+    <b>Verdadero.</b>
     </td>
     <td>
-    En (8) se levanta e2 y se maneja en 4, luego se relanza la excepción que es manejada en (1) porque e pertenece a main.
+    En(8) se levanta e2 y se maneja en 4, luego se relanza la excepción que es manejada en (1) porque e pertenece a main.
     <b>Falso.</b>
     </td>
   </tr>
   <tr>
     <td>
-    En (7) se levanta e y se maneja en 4, luego se vuelve a levantar la excepción de forma anónima por lo que B termina y se busca el manejador en A para manejarse finalmente en (1) de Main porque C y A no tiene manejadores definidos para
-    esa variable.
-    <b>Falso.</b>
+    En (7) se levanta e y se maneja en 4, luego se vuelve a levantar la excepción de forma anónima por lo que B termina y se busca el manejador en A para manejarse finalmente en (1) de Main porque C y A no tiene manejadores definidos para esa variable.
+    <b>Verdadero.</b>
     </td>
     <td>
     En (7) se levanta e y se maneja en 4, luego se relanza la excepción que es manejada en (3) porque e pertenece a main pero pierde el alcance en A.
