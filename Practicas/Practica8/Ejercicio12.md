@@ -56,4 +56,4 @@ End; //MAIN
 
 1. Primero va a ejecutarse UNO(). Despues entra en el while y salta la excepcion. Termina uno y se sigue en la proxima linea a la llamada de uno, la cual es ...... Si en esa linea surge un problema, el programa termina ya que es la subrutina mas externa y no hay nadie que la llamo. Si no hay errores, luego se ejecuta Dos(). En dos, si se produce una excepcion de tipo error1, es manejada por el proceso main, pero el resignal no se puede llevar a cabo y termina ya que no hay nadie que llamo al main. Si no surgen excepciones durante los ...., si m es 0 se levanta una excepcion de tipo error1 y es manejada por el main, pero el resignal no se puede llevar a cabo y termina ya que no hay nadie que llamo al main. Si no, termina dos y termina el programa.
 
-2. No, modifica la del main. CONSULTAR COMO HARIA PARA LOGRARLO.
+2. No, modifica siempre la del main. Para lograrlo la idea es pasar la variable a traves del signal y modificar esa variable recibida, de esa manera se modificaría la variable de UNO.
