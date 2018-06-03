@@ -51,45 +51,45 @@ Si b es true, entonces va a entrar en el if y va a levantar la excepcion X. Ante
 Por el contrario, si b es false, entonces no entra al if y se le suma 2 a m y finaliza el modulo, dejando a y con 22. Luego se ejecuta Prueba2 y ocurre lo mismo que se b fuera true, solo que, en este caso, cuando se resuelva la excepcion y queda con 26 y se imprime dicho valor. Cuando se retoma la ejecucion en Main, imprime 26.
 
 2.
-    ```ADA
-    Procedure Principal;
-        x:exception;
-        y:integer;
-        b:boolean;
-    Procedure Prueba1 (out m:integer);
-        x: exception;
-        begin
-            m:=20;
-            if (b=true) then raise X;
-            m:=m + 2;
-            exception
-                when x => raise x
-        end;
-    Procedure Prueba2;
-        a:int:=0; b:=4/a;
-        begin
-            y:=y+8;
-            exception
-                when constraint-error => y:=y+10;
-        end;
+```ADA
+Procedure Principal;
+    x:exception;
+    y:integer;
+    b:boolean;
+Procedure Prueba1 (out m:integer);
+    x: exception;
     begin
-        Read(b);
-        y:=1;
-        Prueba1(y);
-        Prueba2;
-        write(y);
+        m:=20;
+        if (b=true) then raise X;
+        m:=m + 2;
         exception
-            when constraint-error =>
-                begin
-                    y:=y+4;
-                    write(Y);
-                end;
-            when X =>
+            when x => raise x
+    end;
+Procedure Prueba2;
+    a:int:=0; b:=4/a;
+    begin
+        y:=y+8;
+        exception
+            when constraint-error => y:=y+10;
+    end;
+begin
+    Read(b);
+    y:=1;
+    Prueba1(y);
+    Prueba2;
+    write(y);
+    exception
+        when constraint-error =>
             begin
-                y:= y*30;
+                y:=y+4;
                 write(Y);
             end;
-    end;
-    ```
+        when X =>
+        begin
+            y:= y*30;
+            write(Y);
+        end;
+end;
+```
 
 En este caso, cuando la excepcion x es levantada en prueba 1 se resuelve en ese mismo modulo y se relevanta y finaliza el modulo Prueba1. En ese momento la excepcion ya es anonima dado que el modulo que contenia la declaracion de la excepcion x ya no existe y no es compatible con otro modulo que tenga declarada esa excepcion ya que, a pesar de llamarse igual, son distintas entre si por lo que cuando intenta resolverse en Main no puede, ya que hay otra excepcion x declarada alli.
