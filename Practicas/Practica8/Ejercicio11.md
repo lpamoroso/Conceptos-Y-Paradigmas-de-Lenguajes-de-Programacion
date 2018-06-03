@@ -50,7 +50,7 @@ En principio, el camino de ejecucion no difiere en nada ya que los valores de la
 Si b es true, entonces va a entrar en el if y va a levantar la excepcion X. Ante este escenario se va a intentar manejar la excepcion localmente pero va a ser imposible dado que no hay un manejador definido para dicho error. Ada utiliza la propagacion dinamica, por lo que ese modulo va a finalizar y se buscara una forma de resolver la excepcion en el main. En este caso, es posible resolverla, por lo que se le asigna 500 a y y se imprime dicho valor y se continua la ejecucion en Main. Luego de Prueba 1 se ejecuta Prueba2 y ocurre un contraint_error dado que se intenta asigna 4/0 a b. En este caso, se procede a abortar el modulo y a intentar manejar la excepcion en el Main. En este caso, la excepcion es manejada exitosamente y se le asigna 504 a y y se imprime dicho valor. Luego se continua la ejecucion en Main y se imprime el valor de y y termina el programa.
 Por el contrario, si b es false, entonces no entra al if y se le suma 2 a m y finaliza el modulo, dejando a y con 22. Luego se ejecuta Prueba2 y ocurre lo mismo que se b fuera true, solo que, en este caso, cuando se resuelva la excepcion y queda con 26 y se imprime dicho valor. Cuando se retoma la ejecucion en Main, imprime 26.
 
-2.
+2.  
     ```ADA
     Procedure Principal;
         x:exception;
