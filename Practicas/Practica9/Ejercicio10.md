@@ -1,4 +1,4 @@
-# Ejercicio 10
+# Ejercicio 10(CORREGIDO)
 
 Determine si el lenguaje que utiliza frecuentemente implementa instrucciones para
 el manejo de espacio de nombres. Mencione brevemente qué significa este concepto y enuncie

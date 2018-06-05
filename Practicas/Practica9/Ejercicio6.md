@@ -51,6 +51,13 @@
     Si ninguna de las constantes del case iguala el valor de la expresion, la lista de sentencias luego de la palabra clave else u otherwise es ejecutada. Esta podria ser una lista de sentencias vacia. Si no hubiera un else, y ninguna constante de algun case igualara el valor de la expresion, el flujo del programa continua desde el ultimo end.
     La sentencia case pueden ser sentencias compuestas(bloques Begin..End, por ejemplo).
 
+    ```Pascal
+    case place of
+      1: ShowMessage('Medalla de oro');
+      2: ShowMessage('Medalla de plata');
+      3: ShowMessage('Medalla de bronce');
+    end;
+    ```
 
 + Python
 
