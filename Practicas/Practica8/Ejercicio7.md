@@ -5,29 +5,29 @@ Sea el siguiente programa escrito en pascal:
 ```pascal
 Program​ Principal;
     var x:int; b1,b2:boolean;
-Procedure​ P (b1:boolean);
-    var x:int;
-Procedure​ Manejador1
-    begin
-        x:=x + 1;
-    end;
-    begin
-        x:=1;
-        if b1=true then Manejador1;
-        x:=x+4;
-    end;
-Procedure​ Manejador2;
-    begin
-        x:=x * 100;
-    end;
-Begin
-    x:=4;
-    b:=true;
-    b1:=false;
-    if b1=false then Manejador2;
-    P(b);
-    write (x);
-End.
+    Procedure​ P (b1:boolean);
+        var x:int;
+        Procedure​ Manejador1
+            begin
+                x:=x + 1;
+            end;
+        begin
+            x:=1;
+            if b1=true then Manejador1;
+            x:=x+4;
+        end;
+    Procedure​ Manejador2;
+        begin
+            x:=x * 100;
+        end;
+    Begin
+        x:=4;
+        b:=true;
+        b1:=false;
+        if b1=false then Manejador2;
+        P(b);
+        write (x);
+    End.
 ```
 
 1. Implemente este ejercicio en PL/1 utilizando manejo de excepciones
@@ -77,7 +77,7 @@ Procedure​ P (b1:boolean);
         if b1=true then Manejador1;
         x:=x+4;
         Exception
-            when Manejador1 → x:=x + 1;
+            when Manejador1 => x:=x + 1;
     end;
 Begin
     x:=4;
@@ -87,6 +87,6 @@ Begin
     P(b);
     write (x);
     Exception
-        when Manejador2 → x:=x * 100;
+        when Manejador2 => x:=x * 100;
 End.
 ```
