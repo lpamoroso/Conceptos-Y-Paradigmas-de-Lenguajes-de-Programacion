@@ -90,3 +90,4 @@ Begin
         when Manejador2 => x:=x * 100;
 End.
 ```
+//CORREGIR EL PUNTO DE ADA
