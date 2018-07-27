@@ -4,7 +4,7 @@
 
 Un lenguaje de Programación es una herramienta usada para comunicarnos con las máquinas y también con las personas. El valor de un lenguaje se juzga en base a la forma en que afecta a la producción de Software y a la facilidad con la que puede integrarse a otras herramientas. Es importante destacar que cada lenguaje tiene límites y posibilidades, puede resolver ciertos problemas más facilmente o no, etc.
 
-2. Criterios para evaluar los lenguajes de programación
+2. ¿Cuáles son los criterios para evaluar los lenguajes de programación?
 
 + Simplicidad y legibilidad
 + Claridad en los bindings
