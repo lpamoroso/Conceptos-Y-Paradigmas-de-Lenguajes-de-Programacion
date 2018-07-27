@@ -1,5 +1,3 @@
-# Conceptos que me ayuden a aprobar conceptos
-
 ## Intro
 
 1. ¿Qué es un lenguaje de programación?
