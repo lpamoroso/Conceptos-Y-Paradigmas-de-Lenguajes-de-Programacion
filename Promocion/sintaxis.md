@@ -50,24 +50,29 @@ Para esto, la sintáxis establece reglas que definen cómo deben combinarse las 
 * **Sentencias**: son las unidades ejecutables más pequeñas de un programa, en otras palabras, una línea de código cualquiera. Especifican y controlan el flujo y orden de ejecución del programa. Hay sentencias simples, estructuradas y anidadas.
 
 6. ¿Cuáles son las reglas sintácticas y léxicas?
+
 * **Reglas léxicas**: conjunto de reglas para formar las *word*, a partir de los caracteres del alfabeto. Ejemplo: En C el símbolo de distinto es != en Pascal <>.
 * **Reglas sintácticas**: conjunto de reglas que definen como formar las expresiones y sentencias. Ejemplo: el if en C no lleva *then*; en Pascal, si.
 
 7. ¿Qué tipos de sintaxis existen?
+
 * **Abstracta**: se refiere básicamente a la estructura.
 * **Concreta**: se refiere básicamente a la parte léxica.
 * **Pragmática**: se refiere básicamente al uso práctico.
 
 8. ¿Cómo defino una sintaxis?
-Se necesita una descripción finita para definir un conjunto infinito (conjunto de todos los programas bien escritos). Hay varias formas de lograr esto:
+
+  Se necesita una descripción finita para definir un conjunto infinito (conjunto de todos los programas bien escritos). Hay varias formas de lograr esto:
   + Usando lenguaje natural.
   + Usando gramática libre de contexto como BNF(Backus y Naun).
   + Diagramas sintácticos (Como BNF pero más intuitivo).
   
 9. ¿Qué es BNF?
+
 Es una notación formal para describir la sintaxis. Es también un metalenguaje (algo asi como un lenguaje que se usa para hablar acerca de otro lenguaje). Como tal, utiliza metasímbolos. Define las reglas por medio de producciones.
 
 10. ¿Qué es la gramática?
+
 Es un conjunto de reglas finita que define un conjunto infinito de posibles sentencias válidas en el lenguaje. Una gramática está formada por una 4-tupla
   * Conjunto de símbolos no terminales(N).
   * Conjunto de símbolos terminales(T).
@@ -75,9 +80,11 @@ Es un conjunto de reglas finita que define un conjunto infinito de posibles sent
   * Conjunto de producciones (P).
 
 11. ¿Qué es un arbol sintáctico?
+
 Es una representación de todos los string válidos que se puedan armar con los terminales. Éste es el método de reconocimiento que usan los compiladores o intérpretes en el que permiten determinar si un string dado es válido o no en el lenguaje. Esto es lo que se llama *parsing* o *parse* y consiste en realizar un árbol sintáctico para cada sentencia que analize el compilador/intérprete.
 
 12. ¿Qué es una gramática ambigua?
+
 Ocurre cuando una sentencia puede derivarse de mas de una forma, esto es, hay mas de una representación posible usando la gramática libre de contexto(BNF, por ejemplo).
 
 13. Aparte de BNF ¿Existen otras gramáticas?
@@ -89,4 +96,5 @@ Si, por ejemplo EBNF(Extended BNF) o los diagramas de Conway. Algunas ni siquier
 * Si es sensible al contexto, entonces si se lo analiza.
 
 14. ¿Qué son los diagramas de Conway?
+
 Es un grafo sintáctico o carta sintáctica en el que cada diagrama representa una regla o producción y tiene una entrada y una salida. El camino determina el análisis. Para que una sentencia sea válida, debe haber un camino desde la entrada hasta la salida que la describa. Se visualiza y entiende mejor que BNF o EBNF.
