@@ -1,4 +1,4 @@
-# Sintaxis y semántica
+# Sintaxis
 
 1. ¿Qué es la sintaxis?
 
