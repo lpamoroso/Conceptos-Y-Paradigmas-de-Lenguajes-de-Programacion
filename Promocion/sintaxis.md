@@ -65,4 +65,28 @@ Se necesita una descripción finita para definir un conjunto infinito (conjunto 
   + Diagramas sintácticos (Como BNF pero más intuitivo).
   
 9. ¿Qué es BNF?
-Es una notación formal para describir la sintaxis. Es también un metalenguaje (algo asi como un lenguaje que se usa para hablar acerca de otro lenguaje). Como tal, utiliza metasímbolos.
+Es una notación formal para describir la sintaxis. Es también un metalenguaje (algo asi como un lenguaje que se usa para hablar acerca de otro lenguaje). Como tal, utiliza metasímbolos. Define las reglas por medio de producciones.
+
+10. ¿Qué es la gramática?
+Es un conjunto de reglas finita que define un conjunto infinito de posibles sentencias válidas en el lenguaje. Una gramática está formada por una 4-tupla
+  * Conjunto de símbolos no terminales(N).
+  * Conjunto de símbolos terminales(T).
+  * Símbolo distinguido de la gramática que pertenece a N(S).
+  * Conjunto de producciones (P).
+
+11. ¿Qué es un arbol sintáctico?
+Es una representación de todos los string válidos que se puedan armar con los terminales. Éste es el método de reconocimiento que usan los compiladores o intérpretes en el que permiten determinar si un string dado es válido o no en el lenguaje. Esto es lo que se llama *parsing* o *parse* y consiste en realizar un árbol sintáctico para cada sentencia que analize el compilador/intérprete.
+
+12. ¿Qué es una gramática ambigua?
+Ocurre cuando una sentencia puede derivarse de mas de una forma, esto es, hay mas de una representación posible usando la gramática libre de contexto(BNF, por ejemplo).
+
+13. Aparte de BNF ¿Existen otras gramáticas?
+
+Si, por ejemplo EBNF(Extended BNF) o los diagramas de Conway. Algunas ni siquiera son libres de contexto.
+
+#Tip para diferenciar las gramaticas libre de contexto y aquellas que no lo son:
+* Si es libre de contexto, entonces el contexto no tiene vela en este entierro(no se lo analiza).
+* Si es sensible al contexto, entonces si se lo analiza.
+
+14. ¿Qué son los diagramas de Conway?
+Es un grafo sintáctico o carta sintáctica en el que cada diagrama representa una regla o producción y tiene una entrada y una salida. El camino determina el análisis. Para que una sentencia sea válida, debe haber un camino desde la entrada hasta la salida que la describa. Se visualiza y entiende mejor que BNF o EBNF.
