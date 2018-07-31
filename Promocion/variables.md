@@ -26,4 +26,14 @@ Hay dos tipos de alcance:
 * **L-value**: es el lugar de memoria asociado con la variable(tiempo de vida).
 * **R-value**: es el valor codificado almacenado en la ubicación de la variable.
 
-3. 
+3. Alias
+
+Dos variables son alias si comparten el mismo objeto de dato en el mismo ambiente de referencia. El uso de alias pude llevar a programas de difícil lectura y a errores dado que se puede modificar(de forma colateral, por lo general) una variable no local.
+
+4. Sobrecarga
+
+Un nombre esta sobrecargado si, en un momento, referencia mas de una entidad y hay suficiente información para permitir establecer la ligadura unívocamente.
+
+#Tip para diferenciar alias de sobrecarga
+* Alias: distintos nombres apuntan a una entidad.
+* Sobrecarga: un nombre apunta a distintas entidades.
