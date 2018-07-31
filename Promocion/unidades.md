@@ -24,10 +24,13 @@ Otros elementos:
 * **Punto de retorno**: es una pieza cambiante de información que debe ser salvada en el registro de activación de la unidad llamada.
 * **Ambiente de referencia**: puede ser local o no local. Si es local, las variables son locales, ligadas a los objetos almacenados en su registro de activación. Si es no local, las variables no son locales, ligadas a objetos almacenados en los registros de activación de otras unidades
 
-4. ¿Cuál es la estructura de ejecución de un lenguaje de progrmación?
+4. ¿Cuál es la estructura de ejecución de un lenguaje de programación?
 
 Hay tres:
 * **Estático(espacio fijo)**: el espacio necesario para la ejecución se deduce del código. Todos los requerimientos de memoria necesarios se conocen antes de la ejecución por lo que la alocación puede hacerse estáticamente. Por esa misma razón tampoco puede haber recursión.
 * **Basado en pila(espacio predecible)**: el espacio se deduce del código. Este esquema sirve para programas más potentes cuyos requerimientos de memoria no pueden calcularse en traducción. La memoria a utilizarse es predecible y sigue una disciplina last-in-first-out. Las variables se alocan automáticamente y se desalocan cuando el alcance se termina. Se utiliza una estructura de pila para modelizar la estructura.
 * **Dinámico(espacio impredecible)**: los datos son alocados dinámicamente solo cuando se los necesita durante la ejecución. No pueden modelizarse con una pila, el programador puede crear objetos de dato en cualquier punto arbitrario durante la ejecución del programa. Los datos se alocan en la zona de memoria heap.
 
+5. ¿Qué es una unidad genérica?
+
+Una unidad genérica es una unidad que puede instanciarse con parámetros formales de distinto tipo. Como todas las unidades instanciadas tienen el mismo nombre, da la sensación que una unidad pudiera ejecutarse con parámetros de distinto tipo. Por ejemplo, una unidad genérica que ordena elementos de un arreglo, podrá instanciarse para elementos enteros, flotantes, etc.
