@@ -33,6 +33,26 @@ En lo concerniente al tiempo de chequeo, se relaciona con el tiempo de ligadura.
 4. ¿Qué es un tipo?
 
 Es una mezcla de tres puntos de vista íntimamente relacionados:
-* Desde el punto de vista **denotacional**(la relación entre en concepto y la realidad), es el conjunto de valores sobre un dominio
+* Desde el punto de vista **denotacional**(la relación entre en concepto y la realidad), es el conjunto de valores sobre un dominio.
 * Desde el punto de vista **constructivo**, puede ser primitivo(built-in o predefinido) si lo provee el lenguaje o compuesto(composite o derivado) si emplea constructores de tipos.
 * Desde el punto de vista **abstracto**, puede ser una interfaz a una representación o un conjunto de operaciones con semántica bien definida y consistente.
+
+El dominio de un tipo de dato implica el conjunto de valores éste contempla mientras que la abstracción es aquello que permite distinguir qué operaciones pueden realizarse con tal dato sin preocuparse demasiado en cómo se implementará luego todo aquello.
+
+5. ¿Qué tipos de datos existen?
+
+||Elementales|Compuestos|
+|:---:|:---:|:---:|
+|Predefinidos|Enteros, reales, caracteres, booleanos, etc|String(mayoría de las veces predefinido)|
+|Definidos por el usuario|Enumerativos|Arreglos, registros, listas, etc|
+
+* Tipos predefinidos: son aquellos que ya vienen preestablecidos en el lenguaje. Ventajas:
+  + Invisibilidad de la representación.
+  + Verificación estática.
+  + Desambiguar operadores.
+  + Control de precisión.
+* Tipos definidos por el usuario: separan la especificación de la implementación. Se definen los tipos que el problema necesita. Permiten definir nuevos tipos e instanciarlos. La idea es que cumplan con algunas características:
+	+ **Legibilidad**: elección apropiada de nuevos nombres.
+	+ **Estructura jerárquica de las definiciones de tipos**: proceso de refinamiento.
+	+ **Modificabilidad**: los cambios solo se realizan sobre la definición.
+	+ **Factorización**: se usa la cantidad de veces necesarias.
