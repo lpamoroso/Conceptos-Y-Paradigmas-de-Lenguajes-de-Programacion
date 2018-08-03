@@ -1,6 +1,6 @@
 # Excepciones
 
-1. Excepciones
+1. ¿Qué es una excepcion?
 
 Es una condición inesperada o inusual, que surge durante la ejecución del programa y no puede ser manejada en el contexto local.
 
