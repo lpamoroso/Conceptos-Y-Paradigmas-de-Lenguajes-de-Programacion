@@ -1,4 +1,4 @@
-# Intro excepciones
+# Recursión y punteros
 
 1. ¿Qué es la recursión?
 
