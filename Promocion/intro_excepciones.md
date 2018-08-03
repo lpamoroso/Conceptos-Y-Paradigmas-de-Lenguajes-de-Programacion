@@ -8,8 +8,8 @@ Para implementarla, los lenguajes de programación convencionales utilizan el co
 2. ¿Qué es un puntero?
 
 Son estructuras de tamaño arbitrario sin un número de items determinado(datos anónimos). Características:
-* Relaciones múltiples entre los items: varias estructuras sin necesidad de duplicarlo.
-* Acceso a bajo nivel: los punteros están cerca de la máquina en su implementación.
+* **Relaciones múltiples entre los items**: varias estructuras sin necesidad de duplicarlo.
+* **Acceso a bajo nivel**: los punteros están cerca de la máquina en su implementación.
 
 Sin embargo, los punteros son estructuras inseguras por varias razones, entre ellas, una de sus características principales: el hecho de poder acceder a bajo nivel. La cierto es que pueden obscurecer o hacer inseguros a los programas que los usan.  
 Algunas inseguridades:
@@ -24,5 +24,48 @@ Algunas inseguridades:
 3. Liberación de memoria: objetos perdidos
 
 Las variables puntero se alocan como cualquier otra variable en la pila de registros de activación. Los objetos apuntados que se alocan a través de la primitiva new son alocados en la heap. La memoria disponible(heap) podría rápidamente agotarse a menos que de alguna forma se devuelva el almacenamiento alocado liberado.
-Hay varias situaciones en las que podría liberarse la memoria sin afectar el programa, por ejemplo, si los objetos en la heap dejan de ser accesibles.
-Es en este contexto que es necesaria alguna forma de liberar la memoria, acá es donde aparece el garbage collector.
+Hay varias situaciones en las que podría liberarse la memoria sin afectar el programa, por ejemplo, si los objetos en la heap dejan de ser accesibles. Sin embargo la cuestión es esa: ¿Cuáles son esas situaciones en que se debe liberar memoria? Lo cierto es que no hay una respuesta exacta: depende del programador que debe notificar al sistema cuando un objeto ya no se usa. Sin embargo, esto último podría provocar punteros sueltos si hubiera más de un puntero apuntando a tal dirección. Este error es dificil de detectar y costoso, por lo que la mayoría de los lenguajes no lo implementan.
+Es en este contexto en que aparecen dos formas de liberar la memoria:
+* **Explícita**: en C, por ejemplo, existe una función free() que libera la memoria reservada de forma dinámica, sin embargo puede generar referencias sueltas. Para evitarlo se necesitaría una verificación dinámica que garantize el uso correcto.
+* **Implícita**: en este caso, el sistema, durante la ejecución, tomará la decisión de descubrir la basura por medio de un algoritmo de recolección de basura denominado garbage collector. Para lenguajes que hacen uso de variables dinámicas esta funcionalidad es mucho muy importante.  
+El garbage collector es un algoritmo que se ejecuta durante el procesamiento de las aplicaciones. Hay varias formas de implementarlo. Una de ellas es la de *reference counting* que supone que cada objeto en la heap tiene un campo descriptor extra que indica la cantidad de variables que lo referencian. Si es 0 es porque es basura.
+
+4. TAD(Tipos Abstractos de datos)
+
+Los nuevos tipos de datos definidos por el usuario se llaman tipos abstractos de datos. Los tipos de datos son abstracciones y el proceso de construir nuevos tipos se llama abstracción de datos. Un TAD está compuesto por una forma en que los datos son representados y operaciones inherentes a ese dato. La clave para el desarrollo de estos tipos de dato reside en la abstracción. Abstraer es representar algo descubriendo sus características esenciales y suprimiendo las que no lo son. Un TAD satisface varias características:
+* **Encapsulamiento**: la representación del tipo y las operaciones permitidas para los objetos del tipo se describen en una única unidad sintáctica.
+* **Ocultamiento de la información**: la representación de los objetos y la implementación del tipo permanecen ocultos.
+Cada lenguaje llama de distinto modo a los TAD: en ADA son *paquetes*, en JAVA son *clases*, en Modula son *módulos*.
+Para definir un TAD se utiliza la especificación formal, la cual proporciona un conjunto de axiomas que describen el comportamiento de todas las operaciones. También debe de incluir una parte de sintaxis y semántica. Hay operaciones definidas por sí mismas que se consideran constructores del TAD. Normalmente solo inicializan.
+
+5. Excepciones
+
+Es una condición inesperada o inusual, que surge durante la ejecución del programa y no puede ser manejada en el contexto local.
+
+6. ¿Qué hacemos si surge una excepción?
+
+El programador tiene tres opciones:
+* Inventar un valor que el llamador recibe en lugar de un valor válido
+* Retornar un valor de estado al llamador, que debe verificarlo
+* Pasar una clausura para una rutina que maneje errores
+
+El manejo de excepciones por parte de los lenguajes resuelve el problema de la siguiente manera:
+* El caso normal se expresa de manera simple y directa
+* El flujo de control se enruta a un manejador de excepciones sólo cuando es necesario.
+
+7. ¿Cómo se maneja una excepción?
+
+Originalmente, se disponía de ejecución condicionada(algo así como si pasa esto, hace esto otro, una suerte de if), por lo que si surgía una excepción se la atendía ahí mismo y se continuaba con el programa(PL/I). Sin embargo, los lenguajes más modernos ofrecen bloques léxicos. El bloque inicial de código es para el caso normal. El bloque contigüo representa el manejador de excepciones que reemplaza la ejecución del resto del bloque inicial en caso de error.
+
+8. ¿Qué analizar acerca de un lenguaje que provee excepciones?
+
+* ¿Cómo se maneja una excepción y cuál es su ámbito?: Ocurrida una excepción, hay que analizar qué es lo que hace el lenguaje. Generalmente, busca el bloque de excepciones que corresponde a esa porción de código y deriva allí la ejecución. Es útil, además, tener presente cuál es el alcance de la excepción, el cual generalmente es igual que las variables que posee el lenguaje.
+* ¿Cómo se alcanza una excepción?: Hay dos formas:
+  + **Implícita**: si cuando se produce una excepción que el lenguaje tiene contemplada, como puede ser la división por cero, le lanza una excepción predefinida.
+  + **Explicita**: si el programador hace la invocación de la excepción a través de la instrucción que provee el lenguaje: raise, throw, etc.
+* ¿Cómo especificar las unidades(manejadores de excepciones) que se han de ejecutar cuando se alcanza las excepciones?: Dependiendo del lenguaje, el bloque de excepciones se debe colocar en el código en determinado lugar.
+* ¿A dónde se cede el control cuando se termina de atender las excepciones?: nuevamente, dos opciones:
+  + **Terminación**: si se termina la ejecución de la unidad que alcanza la excepción y se transfiere el control a la excepción, y luego se transfiere el control al manejador.
+  + **Reasunción**: si se maneja la excepción y se devuelve el control al punto siguiente dónde se invocó a la excepción, permitiendo la continuación.
+* ¿Cómo se propagan las excepciones?: Debemos tener presente cómo hace el programa para buscar un manejador en caso de que el bloque no lo contenga explicitamente. Generalmente esto se realiza dinámicamente, pero podrían haber combinaciones de dinámica con estática.
+* ¿Hay excepciones predefinidas?: depende del lenguaje. En el caso de ADA, por ejemplo, existe el Constraint_Error o el Storage_Error, entre otras.
