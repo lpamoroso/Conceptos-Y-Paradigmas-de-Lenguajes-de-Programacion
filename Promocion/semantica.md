@@ -58,14 +58,7 @@ En la compilación, los programas escritos en un lenguaje de alto nivel se tradu
 
 ¿Cuál es mejor?
 
-Parafraseando a la Jelinek:
-> Lo dejo a tu criterio, lince.
-
-Entonces ¿Qué nombre le ponemos al chico?
-
-Los compiladores e intérpretes tienen muchas diferencias entre sí, ventajas y desventajas el uno con respecto al otro. El truco está en hacer una combinación de ambas técnicas. Como diría Moe:
-
-![Oops...! Me vaporizaron la imagen. Informame así la vuelvo a subir xD](https://i.imgur.com/hDTofcj.jpg)
+Los compiladores e intérpretes tienen muchas diferencias entre sí, ventajas y desventajas el uno con respecto al otro. El truco está en hacer una combinación de ambas técnicas.
 
 Algunos ambientes de programación contienen las dos versiones (interpretación y compilación), lo que permite utilizar el intérprete en la etapa de desarrollo, facilitando el diagnóstico de errores, y luego de que el programa haya sido validado es compilado para generar código mas eficiente.  
 Otra forma es la traducción a un código intermedio que luego se interpretará. En este caso, se genera código portable, es decir, código fácil de transferir a diferentes máquinas. 
