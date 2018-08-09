@@ -34,6 +34,6 @@ Dos variables son alias si comparten el mismo objeto de dato en el mismo ambient
 
 Un nombre esta sobrecargado si, en un momento, referencia mas de una entidad y hay suficiente información para permitir establecer la ligadura unívocamente.
 
-#Tip para diferenciar alias de sobrecarga
+Tip para diferenciar alias de sobrecarga
 * Alias: distintos nombres apuntan a una entidad.
 * Sobrecarga: un nombre apunta a distintas entidades.
