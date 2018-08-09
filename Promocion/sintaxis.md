@@ -36,8 +36,7 @@ Para esto, la sintáxis establece reglas que definen cómo deben combinarse las 
   + Permitir al compilador y al programador expresarse claramente.
   + Hacer los programas más legibles y permitir una rápida traducción.
 
-#MacriTip para evitar confusión entre palabras claves y palabras reservadas:
-  * ~~Si es claro y amarillo seguro que es juguillo, si es turbio y picosón es sidra muchachon.~~
+Tip para evitar confusión entre palabras claves y palabras reservadas:
   * Para identificar una palabra clave hay que figurarse una palabra que solo tiene sentido dentro de un contexto especifico. Por lo tanto, todas las palabras reservadas son palabras claves. Sin embargo, no todas las palabras claves son reservadas. Ejemplos: 
     + *printf*: en ese contexto, *printf* no es ni palabra clave ni palabra reservada porque no tiene significado dentro del contexto.
     + *printf()*: acá *printf* es palabra clave ya que cumple una función en el contexto(llamada a funcion).
