@@ -17,9 +17,17 @@ Un paradigma de programación es un estilo de desarrollo de programas, un modelo
 	Además de los términos, existen los **términos compuestos**. Éstos consisten en un functor seguido de un número fijo de argumentos encerrados entre paréntesis, los cuales son a su vez términos. Denominaremos *aridad* al número de argumentos y *estructura* a un término compuesto cuyos argumentos no son variables. Ejemplos: padre->constante; Longitud->variable; tamaño(4,5)->estructura. A su vez, la aridad de tamaño es 2.  
 	También existen las listas. La constante *[]* representa una lista vacía. El functor *.* construye una lista de un elemento y una lista. Ejemplo: .(alpha,[]), representa una lista que contiene un único elemento que es alpha. Otra manera de representar la lista es usando *[]* en lugar de *.()*. Volviendo al ejemplo anterior: [alpha,[]]. También puede utilizarse el símbolo *|* en lugar de *,*. En nuestro ejemplo: [alpha|[]]. La notación general para denotar una lista es: [X|Y] donde *X* es el elemento cabeza de la lista e *Y* es una lista que representa la cola de la lista que se está modelando.  
 	
-	Cláusulas de Horn
+	Cláusulas de Horn  
+	Un programa escrito en un lenguaje lógico es una secuencia de **cláusulas**. Las cláusulas pueden ser:
+	+ **Hecho**: expresan relaciones entre objetos o verdades. Son expresiones del tipo p(t1,t2,….tn). Ejemplo: tiene(coche,ruedas)representa el hecho que un coche tiene ruedas. 
+	+ **Regla**: podríamos representarla como *if(condición) else (conclusión);*. Concretamente, las que son de tipo cláusula de Horn tienen la forma de conclusión :- condición donde *:-* indica *si*, *conclusión* es un simple predicado y *condición* es una conjunción de predicados, separados por comas. Representan un AND lógico.
 	
+	Programas y queries
+	+ **Programa**: es un conjunto de reglas y hechos que proveen una especificación declarativa de qué es lo que se conoce y la pregunta es el objetivo que queremos alcanzar.
+	+ **Query**: representa lo que deseamos que sea contestado a esa pregunta.
 	
+	Ejecución de programas
+	La ejecución de un programa será el intento de obtener una respuesta a la pregunta ¿Cuál es el objetivo que queremos alcanzar? Desde un punto de vista lógico, la respuesta a esa pregunta es “YES” si la pregunta puede ser derivada aplicando “deducciones” del conjunto de reglas y hechos dados.
 	
 * **Funcional o aplicativo**: basado en el uso de funciones. Muy popular en la resolución de problemas de inteligencia artificial, matemática, lógica, procesamiento paralelo, etc.  
 	Características:
@@ -70,7 +78,18 @@ Un paradigma de programación es un estilo de desarrollo de programas, un modelo
 	+ Un simple identificador o una constante. Ej: x, 3.
 	+ Una definición de una función. Ej: λ x.x+1.
 	+ Una aplicación de una función. La forma es (e1 e2), dónde se lee e1 se aplica a e2.
-* **Orientado a Objetos**: métodos + mensajes.
+* **Orientado a Objetos**: es un conjunto de **objetos** que **interactúan** mandándose **mensajes**. Sus elementos son:
+	+ **Objetos**: son entidades que poseen estado interno y comportamiento. Es el equivalente a un dato abstracto.
+	+ **Mensajes**: es una petición de un objeto a otro para que este se comporte de una determinada manera.
+	+ **Métodos**: es un programa que está asociado a un objeto determinado y cuya ejecución solo puede desencadenarse a través de un mensaje recibido por éste o por sus descendientes. Cada objeto pertenece a una clase y recibe de ella su funcionalidad. Es un nivel muy abstracto en el que definimos estructura, comportamiento y tenemos ocultamiento(Primer nivel de abstracción de datos). La clase podría poseer instancias de ésta, es decir, un objeto individualizado por los valores que tomen sus atributos. Cada vez que se construye un objeto se está creando una **instancia** de esa clase.
+	+ **Clases**: es un tipo definido por el usuario que determina las estructuras de datos y las operaciones asociadas con ese tipo.
+	
+	Generalización/Especificación: herencia  
+	El segundo nivel de abstracción consiste en agrupar las clases en jerarquías de clases(definiendo subclases y superclases), de forma tal que una clase A herede todas las propiedades de su superclase B(suponiendo que tuviera una).
+	
+	Polimorfismo
+	Es la capacidad que tienen los objetos de distintas clases de responder a mensajes con el mismo nombre.
+
 * **Dirigido por eventos**: el flujo del programa está determinado por sucesos externos(por ejemplo, una acción del usuario).
 * **Orientado a aspectos**: apunta a dividir el programa en módulos independientes, cada uno con un comportamiento y responsabilidad bien definido.
 
