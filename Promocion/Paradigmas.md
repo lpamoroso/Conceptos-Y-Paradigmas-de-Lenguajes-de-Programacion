@@ -8,7 +8,19 @@ Un paradigma de programación es un estilo de desarrollo de programas, un modelo
 
 * **Imperativo**: sentencias  + secuencias de comandos
 * **Declarativo**: los programas describen los resultados esperados sin listar explícitamente los pasos a llevar a cabo para alcanzarlos.
-* **Lógico**: aserciones lógicas: hechos + reglas, Lógico. Aserciones lógicas: hechos + reglas, es declarativo
+* **Lógico**: Es un paradigma en el cual los programas son una serie de aserciones lógicas. El conocimiento se representa a través de **reglas** y **hechos**. Los objetos son representados por **términos**, los cuales contienen constantes y variables. PROLOG es el lenguaje lógico más utilizado.  
+	Elementos  
+	La sintáxis básica es el **término**. Éstos contienen:
+	+ **Constantes**: son elementos determinados. La constantes son string de letras en minúsculas(representan objetos atómicos) o string de dígitos(representan números). Ejemplo: *humano(juan)*, en donde *juan* representa la constante.
+	+ **Variables**: elementos indeterminados que pueden sustituirse por cualquier otro. Los nombres de las variables comienzan con mayúsculas y pueden incluir números. Ejemplo: *humano(X)*, la *X* representa la variable y puede ser sustituída por constantes como: juan, pepe, etc.
+	
+	Además de los términos, existen los **términos compuestos**. Éstos consisten en un functor seguido de un número fijo de argumentos encerrados entre paréntesis, los cuales son a su vez términos. Denominaremos *aridad* al número de argumentos y *estructura* a un término compuesto cuyos argumentos no son variables. Ejemplos: padre->constante; Longitud->variable; tamaño(4,5)->estructura. A su vez, la aridad de tamaño es 2.  
+	También existen las listas. La constante *[]* representa una lista vacía. El functor *.* construye una lista de un elemento y una lista. Ejemplo: .(alpha,[]), representa una lista que contiene un único elemento que es alpha. Otra manera de representar la lista es usando *[]* en lugar de *.()*. Volviendo al ejemplo anterior: [alpha,[]]. También puede utilizarse el símbolo *|* en lugar de *,*. En nuestro ejemplo: [alpha|[]]. La notación general para denotar una lista es: [X|Y] donde *X* es el elemento cabeza de la lista e *Y* es una lista que representa la cola de la lista que se está modelando.  
+	
+	Cláusulas de Horn
+	
+	
+	
 * **Funcional o aplicativo**: basado en el uso de funciones. Muy popular en la resolución de problemas de inteligencia artificial, matemática, lógica, procesamiento paralelo, etc.  
 	Características:
 	+ Define un conjunto de datos.
