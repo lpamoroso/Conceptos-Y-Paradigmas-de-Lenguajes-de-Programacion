@@ -7,7 +7,7 @@ Para implementarla, los lenguajes de programación convencionales utilizan el co
 
 2. ¿Qué es un puntero?
 
-Son estructuras de tamaño arbitrario sin un número de items determinado(datos anónimos). Características:
+Los punteros son variables que tienen como contenido "direcciones" a variables anónimas a las que la única forma de llegar es a través del puntero. Las variables dinámicas son las que apunta el puntero. Características:
 * **Relaciones múltiples entre los items**: varias estructuras sin necesidad de duplicarlo.
 * **Acceso a bajo nivel**: los punteros están cerca de la máquina en su implementación.
 
