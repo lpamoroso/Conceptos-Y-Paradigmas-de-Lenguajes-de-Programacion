@@ -18,7 +18,7 @@ Muchos lenguajes(C, C++, ADA, etc) hacen distinción entre definir y declarar un
 
 3. Ejecución de una rutina
 
-Cuando se invoca una rutina, se ejecuta una instancia del proceso con los particulares valores de los parámetros. Las rutinas poseen un segmento de código, que se almacena en la zona de código, y un registro de activación donde se coloca la información de datos locales que se almacena en la zona de datos. Dependiendo del esquema de ejecución que utilice el lenguaje, el registro de activación se almacena en la memoria desde un comienzo(esquema estático), o se almacenan tantos registros de activación de esa rutina como llamados se hagan, en caso de un esquema basado en pila.
+Cuando se invoca una rutina, se ejecuta una instancia del proceso con los particulares valores de los parámetros. Las rutinas poseen un segmento de código, que se almacena en la zona de código, y un registro de activación donde se coloca la información de datos locales que se almacena en la zona de datos. Dependiendo del esquema de ejecución que utilice el lenguaje, el registro de activación se almacena en la memoria desde un comienzo(esquema estático), o se almacenan tantos registros de activación de esa rutina como llamados se hagan, en caso de un esquema basado en pila.  
 El segmento de código son las instrucciones de la unidad que son almacenadas en la memoria de instrucción. Éste contenido es fijo. El registro de activación son los datos locales de la unidad que se almacenan en la memoria de datos. Éste contenido es cambiante.  
 Otros elementos:
 * **Punto de retorno**: es una pieza cambiante de información que debe ser salvada en el registro de activación de la unidad llamada.
