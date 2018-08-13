@@ -6,13 +6,10 @@ Es una condición inesperada o inusual, que surge durante la ejecución del prog
 
 2. ¿Qué hacemos si surge una excepción?
 
-El programador tiene tres opciones:
-* Inventar un valor que el llamador recibe en lugar de un valor válido
-* Retornar un valor de estado al llamador, que debe verificarlo
-* Pasar una clausura para una rutina que maneje errores
-
-El manejo de excepciones por parte de los lenguajes resuelve el problema de la siguiente manera:
-* El caso normal se expresa de manera simple y directa
+En principio, si surge una excepción y el programador no la abarcó, más allá de que haya o no un manejador de excepciones, el programa aborta.  
+Sin embargo, si el lenguaje no tiene manejo de excepciones, el programador podría simularlas preguntando en cada punto del programa donde pudiera producirse una excepción, si ésta fue lanzada y ejecutar una serie de sentencias para salvar el error y que el programa no finalice abruptamente.  
+En cambio, si el lenguaje usado tiene manejo de excepciones, el desarrollador podría programarlas usando esa estructura. En este caso, el problema se resuelve de la siguiente manera:
+* El caso normal se expresa de manera simple y directa.
 * El flujo de control se enruta a un manejador de excepciones sólo cuando es necesario.
 
 3. ¿Cómo se maneja una excepción?
