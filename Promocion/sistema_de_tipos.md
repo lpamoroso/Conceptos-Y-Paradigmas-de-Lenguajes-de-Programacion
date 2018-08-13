@@ -10,7 +10,7 @@ El objetivo del sistema de tipos es lograr que los programas sean tan seguros co
 * **Tipado Fuerte**: si el sistema de tipos especifica restricciones sobre cómo deben trabajarse las operaciones que involucran valores de diferentes tipos. 
 * **Tipado débil**: si el sistema de tipos es más flexible con respecto a cómo deben trabajarse las operaciones que involucran valores de diferentes tipos.
 
-2. ¿Qué debo tener en cuenta para crear un sistema de tipos?
+3. ¿Qué debo tener en cuenta para crear un sistema de tipos?
 
 Basicamente, cuatro puntos:
 * Tipo y tiempo de chequeo.
@@ -18,7 +18,7 @@ Basicamente, cuatro puntos:
 * Reglas de inferencia de tipo.
 * Nivel de polimorfismo del lenguaje.
 
-3. ¿A qué apunta el tipo y tiempo de chequeo?
+4. ¿A qué apunta el tipo y tiempo de chequeo?
 
 Con respecto al tipo de chequeo, se relaciona con el tipo de ligadura. Hay dos opciones:
 * **Tipado estático**: si las ligaduras se dan durante la compilación.
@@ -30,16 +30,16 @@ En lo concerniente al tiempo de chequeo, se relaciona con el tiempo de ligadura.
 * **Tipado estático**: si cada entidad/variable queda ligada a su tipo durante la compilación, sin necesidad de ejecutar el programa.
 * **Tipado dinámico**: si la ligadura de la variable/entidad se produce en tiempo de ejecución.
 
-4. ¿Qué es un tipo?
+5. ¿Qué es un tipo?
 
 Es una mezcla de tres puntos de vista íntimamente relacionados:
-* Desde el punto de vista **denotacional**(la relación entre en concepto y la realidad), es el conjunto de valores sobre un dominio.
+* Desde el punto de vista **denotacional**(la relación entre el concepto y la realidad), es el conjunto de valores sobre un dominio.
 * Desde el punto de vista **constructivo**, puede ser primitivo(built-in o predefinido) si lo provee el lenguaje o compuesto(composite o derivado) si emplea constructores de tipos.
 * Desde el punto de vista **abstracto**, puede ser una interfaz a una representación o un conjunto de operaciones con semántica bien definida y consistente.
 
 El dominio de un tipo de dato implica el conjunto de valores éste contempla mientras que la abstracción es aquello que permite distinguir qué operaciones pueden realizarse con tal dato sin preocuparse demasiado en cómo se implementará luego todo aquello.
 
-5. ¿Qué tipos de datos existen?
+6. ¿Qué tipos de datos existen?
 
 ||Elementales|Compuestos|
 |:---:|:---:|:---:|
