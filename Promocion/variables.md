@@ -14,7 +14,8 @@ Es un espacio reservado en la memoria principal, identificado por una dirección
 * **Alcance**: es el rango de instrucciones en el que se conoce el nombre(visibilidad). Las instrucciones del programa pueden manipular una variable a través de su nombre dentro de su alcance. Esto significa que, si bien una variable teoricamente tendría alcance en tal rango de instrucciones, podría no ser así en todos los casos. Un ejemplo es el enmascaramiento de variables. Lo que ocurre en este caso es que dentro de dos funciones distintas, por ejemplo, hay dos variables que tienen el mismo nombre por lo que solo una puede ser referenciada con tal identificador en un momento determinado. Paso a explayarme aún más: si yo tengo una función A y una función B, y hay dos variables, una global y otra local a la función B que llevan el mismo nombre y ocurre que función A llama a función B entonces, si bien la variable A resulta alcanzable dentro de la función B, resulta que la variable B enmascara a A, por lo que solo es alcanzable B durante el transcurso de la función.  
 Hay dos tipos de alcance:
 	+ **Alcance estático**: llamado también alcance léxico, define el alcance en términos de la estructura léxica del programa. Puede ligarse estáticamente a una declaración(explícita o implícita) examinando el texto del programa, sin necesidad de ejecutarlo. La mayoría de los lenguajes adoptan reglas de ligadura de alcance estático.
-	+ **Alcance dinámico**: define el alcance del nombre de la variable en términos de la ejecución del programa. Cada declaración de variable extiende su efecto sobre todas las instrucciones ejecutadas posteriormente, hasta que una nueva declaración para una variable con el mismo nombre es encontrado durante la ejecución.
+	+ **Alcance dinámico**: define el alcance del nombre de la variable en términos de la ejecución del programa. Cada declaración de variable extiende su efecto sobre todas las instrucciones ejecutadas posteriormente, hasta que una nueva declaración para una variable con el mismo nombre es encontrado durante la ejecución.  
+	
 	Con respecto a lo anterior ¿Cuál conviene implementar?  
 	Nuevamente, la respuesta es depende lo que se busque. A simple vista, si bien las reglas dinámicas son mas fáciles de implementar, son menos claras en cuanto a disciplina de programación y por lo tanto el código se hacen mas difícil de leer.
 
@@ -23,7 +24,7 @@ Hay dos tipos de alcance:
 	+ **No Local**: son todas las referencias que se utilizan dentro del subprograma pero que no han sido creadas en él.
 	+ **Global**: Son todas las referencias creadas en  el programa principal.
 * **Tipo**: según éste los valores que pueda tomar y las operaciones en que pueda participar.
-* **L-value**: es el lugar de memoria asociado con la variable(tiempo de vida). Se clasifican en:
+* **L-value**: es el lugar de memoria asociado con la variable(tiempo de vida). Se clasifica en:
 	+ Estática.
 	+ Dinámica.
 	+ Semiestática.
@@ -32,7 +33,7 @@ Hay dos tipos de alcance:
 
 3. Alias
 
-Dos variables son alias si comparten el mismo objeto de dato en el mismo ambiente de referencia. El uso de alias pude llevar a programas de difícil lectura y a errores dado que se puede modificar(de forma colateral, por lo general) una variable no local.
+Dos variables son alias si comparten el mismo objeto de dato en el mismo ambiente de referencia. El uso de alias podría llevar a programas de difícil lectura y a errores dado que se podría modificar(de forma colateral, por lo general) una variable no local.
 
 4. Sobrecarga
 
