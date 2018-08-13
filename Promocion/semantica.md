@@ -6,7 +6,7 @@ Es un conjunto de reglas para dar significado a los programas sintácticamente v
 
 2. ¿Cuál es la utilidad de definir y conocer la semántica de un lenguaje? ¿Quiénes se benefician?
 
-La definición de la semántica de un lenguaje de programación proporcionan mecanismos para que una persona o una computadora pueda decir, sinedo el programa ya válido, lo que significa. Esto, a primera vista, implicaría que solo el programador se beneficia de esto. Lo cierto es que también estas reglas sirven para el desarrollo de compiladores e intérpretes, por lo que, si no se hiciera tanta énfasis como se hace, el desarrollo de éstos no sería posible.
+La definición de la semántica de un lenguaje de programación proporcionan mecanismos para que una persona o una computadora pueda decir, siendo el programa ya válido, lo que significa. Esto, a primera vista, implicaría que solo el programador se beneficia de esto. Lo cierto es que también estas reglas sirven para el desarrollo de compiladores e intérpretes, por lo que, si no se hiciera tanta énfasis como se hace, el desarrollo de éstos no sería posible.
 
 3. ¿Qué tipos de semánticas existen?
 
