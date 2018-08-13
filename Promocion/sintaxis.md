@@ -32,7 +32,7 @@ Para esto, la sintáxis establece reglas que definen cómo deben combinarse las 
   + Caracteres especiales (&,%,#, /…).
 - **Identificadores**: por lo general, es una cadena de letras y dígitos, que deben comenzar con una letra que representan los distintos tipos de datos del lenguaje. Si se restringe la longitud, se pierde legibilidad.
 - **Operadores**: son los operadores de suma, resta, etc. La mayoría de los lenguajes utilizan +, -, *, etc. En los otros operadores (DIV, MOD, etc)no hay tanta uniformidad.
-- **Palabras claves y palabras reservadas**: las palabras clave son palabras que tienen un significado dentro de un contexto. Por ejemplo, en C *printf()*, *printf* es una palabra clave en el momento en que agrego los parentesis y pasa a tener un significado dentro de un contexto(pasa a representar una funcion). Las palabras reservadas son palabras claves que además no pueden ser usadas por el programador como identificador de otra entidad. Algunos ejemplos comunes son *if*, *for*, *while*, etc. Algunas de sus ventajas son: 
+- **Palabras claves o palabras reservadas**: las palabras clave son palabras que tienen un significado dentro de un contexto que no pueden ser usadas por el programador como identificador de otra entidad. Algunos ejemplos comunes son *if*, *for*, *while*, etc. Algunas de sus ventajas son: 
   + Permitir al compilador y al programador expresarse claramente.
   + Hacer los programas más legibles y permitir una rápida traducción.
 
@@ -90,9 +90,9 @@ Ocurre cuando una sentencia puede derivarse de mas de una forma, esto es, hay ma
 
 Si, por ejemplo EBNF(Extended BNF) o los diagramas de Conway. Algunas ni siquiera son libres de contexto.
 
-#Tip para diferenciar las gramaticas libre de contexto y aquellas que no lo son:
-* Si es libre de contexto, entonces el contexto no tiene vela en este entierro(no se lo analiza).
-* Si es sensible al contexto, entonces si se lo analiza.
+Tip para diferenciar las gramaticas libre de contexto y aquellas que no lo son:
+* Si es libre de contexto, entonces la semántica estática no está se involucrada.
+* Si es sensible al contexto, entonces si está involucrada.
 
 14. ¿Qué son los diagramas de Conway?
 
