@@ -23,7 +23,11 @@ Hay dos tipos de alcance:
 	+ **No Local**: son todas las referencias que se utilizan dentro del subprograma pero que no han sido creadas en él.
 	+ **Global**: Son todas las referencias creadas en  el programa principal.
 * **Tipo**: según éste los valores que pueda tomar y las operaciones en que pueda participar.
-* **L-value**: es el lugar de memoria asociado con la variable(tiempo de vida).
+* **L-value**: es el lugar de memoria asociado con la variable(tiempo de vida). Se clasifican en:
+	+ Estática.
+	+ Dinámica.
+	+ Semiestática.
+	+ Semidinámica.
 * **R-value**: es el valor codificado almacenado en la ubicación de la variable.
 
 3. Alias
