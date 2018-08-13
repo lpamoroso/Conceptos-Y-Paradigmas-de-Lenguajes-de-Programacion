@@ -16,9 +16,9 @@ Muchos lenguajes(C, C++, ADA, etc) hacen distinción entre definir y declarar un
 * Declarar una rutina implica especificar su tipo, los parametros que recibe y su nombre. 
 * Definir una rutina implica declararla y darle un cuerpo(comportamiento).
 
-3. Ejecución de una rutina(CONSULTAR)
+3. Ejecución de una rutina
 
-Cuando se invoca una rutina se ejecuta una instancia del proceso con los particulares valores de los parámetros. Dicha instancia, a su vez, posee un segmento de código y un registro de activación.  
+Cuando se invoca una rutina, se ejecuta una instancia del proceso con los particulares valores de los parámetros. Las rutinas poseen un segmento de código, que se almacena en la zona de código, y un registro de activación donde se coloca la información de datos locales que se almacena en la zona de datos. Dependiendo del esquema de ejecución que utilice el lenguaje, el registro de activación se almacena en la memoria desde un comienzo(esquema estático), o se almacenan tantos registros de activación de esa rutina como llamados se hagan, en caso de un esquema basado en pila.
 El segmento de código son las instrucciones de la unidad que son almacenadas en la memoria de instrucción. Éste contenido es fijo. El registro de activación son los datos locales de la unidad que se almacenan en la memoria de datos. Éste contenido es cambiante.  
 Otros elementos:
 * **Punto de retorno**: es una pieza cambiante de información que debe ser salvada en el registro de activación de la unidad llamada.
@@ -27,7 +27,7 @@ Otros elementos:
 4. ¿Cuál es la estructura de ejecución de un lenguaje de programación?
 
 Hay tres:
-* **Estático(espacio fijo)**: el espacio necesario para la ejecución se deduce del código. Todos los requerimientos de memoria necesarios se conocen antes de la ejecución por lo que la alocación puede hacerse estáticamente. Por esa misma razón tampoco puede haber recursión.
+* **Estático(espacio fijo)**: el espacio necesario para la ejecución se deduce del código. Todos los requerimientos de memoria necesarios se conocen antes de la ejecución por lo que la alocación puede hacerse estáticamente. Por esa misma razón tampoco puede haber recursión. Todas las variables son estáticas, sensibles a la historia.
 * **Basado en pila(espacio predecible)**: el espacio se deduce del código. Este esquema sirve para programas más potentes cuyos requerimientos de memoria no pueden calcularse en traducción. La memoria a utilizarse es predecible y sigue una disciplina last-in-first-out. Las variables se alocan automáticamente y se desalocan cuando el alcance se termina. Se utiliza una estructura de pila para modelizar la estructura.
 * **Dinámico(espacio impredecible)**: los datos son alocados dinámicamente solo cuando se los necesita durante la ejecución. No pueden modelizarse con una pila, el programador puede crear objetos de dato en cualquier punto arbitrario durante la ejecución del programa. Los datos se alocan en la zona de memoria heap.
 
