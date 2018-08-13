@@ -20,28 +20,22 @@ Para esto, la sintáxis establece reglas que definen cómo deben combinarse las 
 
 4. ¿Cuáles son los elementos de la sintaxis?
 
-* Alfabeto o conjunto de caracteres
-* Identificadores
+* Palabra claves o palabra reservadas
 * Operadores
-* Palabra claves y palabra reservadas
 * Comentarios y uso de blancos
+* Identificadores
+* Alfabeto o conjunto de caracteres
 
+- **Palabras claves o palabras reservadas**: las palabras clave son palabras que tienen un significado dentro de un contexto que no pueden ser usadas por el programador como identificador de otra entidad. Algunos ejemplos comunes son *if*, *for*, *while*, etc. Algunas de sus ventajas son: 
+  + Permitir al compilador y al programador expresarse claramente.
+  + Hacer los programas más legibles y permitir una rápida traducción.
+- **Operadores**: son los operadores de suma, resta, etc. La mayoría de los lenguajes utilizan +, -, *, etc. En los otros operadores (DIV, MOD, etc)no hay tanta uniformidad.
+- **Identificadores**: por lo general, es una cadena de letras y dígitos, que deben comenzar con una letra que representan los distintos tipos de datos del lenguaje. Si se restringe la longitud, se pierde legibilidad.
 - **Alfabeto o conjunto de caracteres**: es el conjunto de elementos estructurales del lenguaje. Hay tres tipos:
   + Caracteres alfabéticos (letras minúsculas y mayúsculas).
   + Caracteres numéricos (0 al 9).
   + Caracteres especiales (&,%,#, /…).
-- **Identificadores**: por lo general, es una cadena de letras y dígitos, que deben comenzar con una letra que representan los distintos tipos de datos del lenguaje. Si se restringe la longitud, se pierde legibilidad.
-- **Operadores**: son los operadores de suma, resta, etc. La mayoría de los lenguajes utilizan +, -, *, etc. En los otros operadores (DIV, MOD, etc)no hay tanta uniformidad.
-- **Palabras claves o palabras reservadas**: las palabras clave son palabras que tienen un significado dentro de un contexto que no pueden ser usadas por el programador como identificador de otra entidad. Algunos ejemplos comunes son *if*, *for*, *while*, etc. Algunas de sus ventajas son: 
-  + Permitir al compilador y al programador expresarse claramente.
-  + Hacer los programas más legibles y permitir una rápida traducción.
 
-Tip para evitar confusión entre palabras claves y palabras reservadas:
-  * Para identificar una palabra clave hay que figurarse una palabra que solo tiene sentido dentro de un contexto especifico. Por lo tanto, todas las palabras reservadas son palabras claves. Sin embargo, no todas las palabras claves son reservadas. Ejemplos: 
-    + *printf*: en ese contexto, *printf* no es ni palabra clave ni palabra reservada porque no tiene significado dentro del contexto.
-    + *printf()*: acá *printf* es palabra clave ya que cumple una función en el contexto(llamada a funcion).
-    + *while*: es tanto palabra clave como palabra reservada ya que cumple una función en el contexto(indica que a partir de acá va a haber un loop) y no podés llamar a una variable while.
-  
 5. ¿Cuál es la estructura sintáctica?
 
 * **Vocabulario o words**: conjunto de caracteres y palabras necesarias para construir expresiones, sentencias y programas. Ej: identificadores, operadores, palabras claves, etc. Las words no son elementales, se construyen a partir del alfabeto.
